@@ -1,4 +1,3 @@
-/* Universal Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     background: #222;
     display: flex;
@@ -15,10 +13,9 @@ body {
     height: 100vh;
 }
 
-/* Card Styling - Main Container */
 .card {
-    width: 85%; /* Adjust width to take up more space */
-    max-width: 2000px;  /* Increase max-width to make the card wider */
+    width: 85%;
+    max-width: 2000px;  
     background: linear-gradient(135deg, #00feba, #5b548a);
     color: #fff;
     margin: 50px auto;
@@ -29,11 +26,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;  /* Ensure it fits well in a 16:9 ratio */
-    position: relative; /* To contain the wave effect */
+    height: 90vh; 
+    position: relative; 
 }
 
-/* Wave animation */
 @keyframes wave {
     0% {
         transform: scale(0);
@@ -58,7 +54,6 @@ body {
     animation: wave 0.6s ease-out forwards;
 }
 
-/* Search Bar */
 .search {
     width: 100%;
     display: flex;
@@ -94,20 +89,17 @@ body {
     width: 16px;
 }
 
-/* Weather Icon Styling */
 .weather-icon {
     width: 170px;
     margin-top: 30px;
 }
 
-/* Town Name */
 .weather h2 {
     font-size: 45px;
     font-weight: 400;
     margin-top: 10px;
 }
 
-/* Weather Details Section */
 .weather {
     display: flex;
     flex-direction: column;
@@ -116,11 +108,10 @@ body {
     margin-top: 20px;
 }
 
-/* Wind Speed & Humidity Boxes (Bottom section) */
 .details {
     display: flex;
     justify-content: space-between;
-    gap: 20px;  /* Space between the two boxes */
+    gap: 20px;  
     margin-top: 50px;
 }
 
@@ -132,7 +123,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     padding: 20px;
-    width: 48%;  /* Make each box take up half the width */
+    width: 48%; 
     box-sizing: border-box;
 }
 
@@ -146,16 +137,14 @@ body {
     margin-top: -6px;
 }
 
-/* Error Message Styling */
 .error {
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
     margin-top: 10px;
-    display: none; /* Initially hidden */
+    display: none;
 }
 
-/* Initially Hidden Weather Data */
 .weather {
-    display: none; /* Initially hidden */
+    display: none;
 }
