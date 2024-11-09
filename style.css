@@ -1,0 +1,161 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card Styling - Main Container */
+.card {
+    width: 85%; /* Adjust width to take up more space */
+    max-width: 2000px;  /* Increase max-width to make the card wider */
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 50px auto;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;  /* Ensure it fits well in a 16:9 ratio */
+    position: relative; /* To contain the wave effect */
+}
+
+/* Wave animation */
+@keyframes wave {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(25);
+        opacity: 0;
+    }
+}
+
+.wave-effect {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.5);
+    pointer-events: none;
+    animation: wave 0.6s ease-out forwards;
+}
+
+/* Search Bar */
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 16px;
+}
+
+/* Weather Icon Styling */
+.weather-icon {
+    width: 170px;
+    margin-top: 30px;
+}
+
+/* Town Name */
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Weather Details Section */
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Wind Speed & Humidity Boxes (Bottom section) */
+.details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* Space between the two boxes */
+    margin-top: 50px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 48%;  /* Make each box take up half the width */
+    box-sizing: border-box;
+}
+
+.col img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.humidity, .wind {
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+/* Error Message Styling */
+.error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+}
+
+/* Initially Hidden Weather Data */
+.weather {
+    display: none; /* Initially hidden */
+}
